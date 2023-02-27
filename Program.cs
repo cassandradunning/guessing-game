@@ -30,10 +30,17 @@ namespace guessingGame
                     // stops from looping
                     break;
                 }
-                else
+                if (parsedInput < secretNumber)
                 {
-                    Console.WriteLine($"Your guess is incorrect. You have {guessLeft} guesses remaining.");
+                    Console.WriteLine($"Your guess is too low. You have {guessLeft} guesses remaining.");
                 }
+                if (parsedInput > secretNumber)
+                {
+                    Console.WriteLine($"Your guess is too high. You have {guessLeft} guesses remaining.");
+                }
+
+
+
 
             };
 
