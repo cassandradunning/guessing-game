@@ -15,25 +15,32 @@ namespace guessingGame
             Console.WriteLine("(2) Medium - this gives the user six guesses.");
             Console.WriteLine("(3) Hard - this gives the user four guesses.");
 
-            string level = Console.ReadLine();
+            string difficulty = Console.ReadLine();
 
-            if (level == "1")
+            if (difficulty == "1")
             {
                 y = 8;
             }
-            if (level == "2")
+            if (difficulty == "2")
             {
                 y = 6;
             }
-            if (level == "3")
+            if (difficulty == "3")
             {
                 y = 4;
             }
+            else if (difficulty == "Cheater")
+            {
+                y = 999;
+            }
+
 
 
             // clears out the console beforehand
             // Console.Clear();
             Console.WriteLine("Guess the secret number");
+
+
 
             for (int i = 0; i < y; i++)
 
@@ -47,7 +54,7 @@ namespace guessingGame
 
                 if (parsedInput == secretNumber)
                 {
-                    Console.WriteLine($"Your guess correct. You have {guessLeft} guesses remaining.");
+                    Console.WriteLine($"Your guess is correct.");
                     // stops from looping
                     break;
                 }
@@ -60,11 +67,7 @@ namespace guessingGame
                     Console.WriteLine($"Your guess is too high. You have {guessLeft} guesses remaining.");
                 }
 
-
-
-
             };
-
 
         }
 
