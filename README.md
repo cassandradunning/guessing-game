@@ -7,7 +7,7 @@ The program should be updated to...
 
 
 Note: Could use ternary statements instead
-
+```javascript
 Console.WriteLine (answer < secretNumber ? "too low" : "too high");
-
+```
 
